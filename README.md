@@ -1,6 +1,35 @@
-# Smart Agri Intelligence & Supply Chain
+# 🌾 Smart Agri Intelligence & Supply Chain
+
+🚀 Built during Ignite Hackathon @ GEC Barton Hill  
+🏆 Secured **3rd Place**  
+👥 Team Nova – Aksha, Archa, Gitto, Sreehari
+
+---
 
 A full-stack web application designed to help farmers make better agricultural decisions and connect directly with buyers, reducing middlemen in the supply chain.
+
+---
+
+## 🎯 Problem
+
+Farmers often struggle with:
+- Choosing the right crops  
+- Accessing real-time guidance  
+- Selling products without intermediaries  
+- Awareness of government schemes  
+
+---
+
+## 💡 Solution
+
+This platform helps farmers by:
+- 🌱 Recommending crops based on soil, weather, and season  
+- 🛒 Connecting farmers directly with buyers  
+- 📢 Providing government scheme information  
+- 🌦️ Offering weather-based farming advice  
+- 👥 Enabling community interaction  
+
+---
 
 ## Prerequisites
 
@@ -76,8 +105,4 @@ The frontend vite server will typically start on `http://localhost:5173`. Open t
 - Farmers can post queries
 - Interaction between users
 
-### 🙌 Acknowledgements
 
-Ignite Hackathon @ GEC Barton Hill
-Team Nova- Gitto, Sreehari, Aksha, Archa 💙
-🏆 Secured **3rd Place**
