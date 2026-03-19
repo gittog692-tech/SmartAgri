@@ -71,11 +71,12 @@ This platform helps farmers by:
 - Interaction between users
 
 ---
+## Installation & Setup
+
 ## Prerequisites
 
 - Node.js installed
 
-## Installation & Setup
 
 ## 1. Clone the repository
 
