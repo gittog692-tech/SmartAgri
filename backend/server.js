@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors');
+const cors = require("cors");
 const db = require('./db');
 
 const authRoutes = require('./routes/authRoutes');
@@ -8,10 +8,12 @@ const cropRoutes = require('./routes/cropRoutes');
 const schemeRoutes = require('./routes/schemeRoutes');
 const communityRoutes = require('./routes/communityRoutes');
 
-const app = express();
+const app = express();   // ✅ create app FIRST
+
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+// Middleware
+app.use(cors());         // ✅ now this works
 app.use(express.json());
 
 // Routes
@@ -24,6 +26,7 @@ app.use('/api/community', communityRoutes);
 app.get('/api/weather-advice', (req, res) => {
     const { weather } = req.query;
     let advice = "Maintain regular watering and monitor for pests.";
+    
     if (weather === 'Rainy') {
         advice = "Ensure proper drainage to prevent root rot. Avoid fertilizer application right before heavy rain.";
     } else if (weather === 'Sunny') {
@@ -31,10 +34,10 @@ app.get('/api/weather-advice', (req, res) => {
     } else if (weather === 'Cold') {
         advice = "Protect sensitive crops from frost. Reduce watering frequency.";
     }
-    
+
     res.json({ advice });
 });
 
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
