@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require("cors");
+
 const db = require('./db');
 
 const authRoutes = require('./routes/authRoutes');
@@ -36,6 +37,14 @@ app.get('/api/weather-advice', (req, res) => {
     }
 
     res.json({ advice });
+});
+app.get('/', (req, res) => {
+    res.send('SmartAgri Backend is running 🚀');
+});
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
 });
 
 app.listen(PORT, () => {

@@ -1,5 +1,16 @@
 import axios from 'axios';
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
+function resolveApiUrl() {
+    const rawApiUrl = (import.meta.env.VITE_API_URL || 'http://localhost:5000/api').trim();
+    const normalizedApiUrl = rawApiUrl.replace(/\/+$/, '');
+
+    // All backend routes in this app are mounted under /api.
+    return normalizedApiUrl.endsWith('/api')
+        ? normalizedApiUrl
+        : `${normalizedApiUrl}/api`;
+}
+
+const API_URL = resolveApiUrl();
 
 // Add token to requests
 axios.interceptors.request.use((config) => {

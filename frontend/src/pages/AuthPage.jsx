@@ -23,7 +23,13 @@ function AuthPage({ onLogin }) {
                 alert("Registration successful. Please login.");
             }
         } catch (err) {
-            setError(err.response?.data?.error || "An error occurred");
+            const errorMessage =
+                err.response?.data?.error ||
+                (typeof err.response?.data === 'string' ? err.response.data : '') ||
+                err.message ||
+                "An error occurred";
+
+            setError(errorMessage);
         }
     };
 
