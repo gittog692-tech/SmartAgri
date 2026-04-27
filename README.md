@@ -79,7 +79,9 @@ The frontend is fully functional and accessible.
 However, the backend is currently **unavailable** due to free-tier hosting limits (Render).
 
 ⏳ It will automatically resume after the next monthly reset.
+
 ⚠️ Some features may not function until backend is restored.
+
 💤 Note: When active, the backend may take ~20–30 seconds to wake up.
 
 ---
